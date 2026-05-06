@@ -1,0 +1,23 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Ilumine (Vite + React)",
+      "runtimeExecutable": "C:\\Program Files\\nodejs\\node.exe",
+      "runtimeArgs": ["node_modules\\vite\\bin\\vite.js"],
+      "port": 5173
+    },
+    {
+      "name": "Ilumine Preview (Vite build preview)",
+      "runtimeExecutable": "C:\\Program Files\\nodejs\\node.exe",
+      "runtimeArgs": ["node_modules\\vite\\bin\\vite.js", "preview"],
+      "port": 4173
+    },
+    {
+      "name": "Legacy (Angular)",
+      "runtimeExecutable": "C:\\Program Files\\nodejs\\node.exe",
+      "runtimeArgs": ["legacy\\node_modules\\@angular\\cli\\bin\\ng.js", "serve"],
+      "port": 4200
+    }
+  ]
+}

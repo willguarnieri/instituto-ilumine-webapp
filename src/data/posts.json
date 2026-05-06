@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "titulo": "Bem-vindos ao blog do Ilumine",
+    "resumo": "Conheça nossas novidades e reflexões sobre saúde emocional e jornadas de autoconhecimento.",
+    "texto": "<p>O Instituto Ilumine compartilha aqui conteúdos para apoiar jovens e educadores em sua jornada de autoconhecimento.</p><p>Fique por dentro das novidades e participe com a gente.</p>",
+    "imagem": "/assets/images/banner-home-1.png",
+    "dataCriacao": "2024-03-15T10:00:00.000Z",
+    "destaque": true
+  },
+  {
+    "id": 2,
+    "titulo": "Saúde emocional no dia a dia",
+    "resumo": "Pequenas práticas que fazem diferença na rotina.",
+    "texto": "<p>Cuidar da saúde emocional é um processo contínuo. Pequenos hábitos podem fortalecer nossa capacidade de lidar com desafios.</p>",
+    "imagem": "/assets/images/light-bg.png",
+    "dataCriacao": "2024-03-10T14:30:00.000Z",
+    "destaque": false
+  },
+  {
+    "id": 3,
+    "titulo": "Conexões que transformam",
+    "resumo": "O poder de estar junto em comunidade.",
+    "texto": "<p>Promover conexões genuínas é parte do nosso propósito. Juntos, amplificamos vozes e construímos caminhos.</p>",
+    "imagem": "/assets/images/good-vibes.png",
+    "dataCriacao": "2024-03-05T09:15:00.000Z",
+    "destaque": false
+  },
+  {
+    "id": 4,
+    "titulo": "Projeto de vida e sonhos",
+    "resumo": "Como o autoconhecimento ajuda a desenhar o futuro.",
+    "texto": "<p>Reconhecer potências e vulnerabilidades é o primeiro passo para sonhar com coragem e planejar com sentido.</p>",
+    "imagem": "/assets/images/girls-sunflower.png",
+    "dataCriacao": "2024-02-28T16:45:00.000Z",
+    "destaque": false
+  },
+  {
+    "id": 5,
+    "titulo": "Educadores parceiros",
+    "resumo": "Parcerias com escolas e ONGs.",
+    "texto": "<p>Trabalhamos ao lado de educadores que acreditam no potencial transformador dos jovens.</p>",
+    "imagem": "/assets/images/header-decoration.png",
+    "dataCriacao": "2024-02-20T11:00:00.000Z",
+    "destaque": false
+  },
+  {
+    "id": 6,
+    "titulo": "Jovens protagonistas",
+    "resumo": "Vozes que inspiram mudança.",
+    "texto": "<p>Os jovens são o futuro — e também o presente das transformações que queremos ver no mundo.</p>",
+    "imagem": "/assets/images/balloons.png",
+    "dataCriacao": "2024-02-12T13:20:00.000Z",
+    "destaque": false
+  },
+  {
+    "id": 7,
+    "titulo": "Trilhas de conteúdo",
+    "resumo": "Uma visão geral das jornadas Ilumine.",
+    "texto": "<p>Nossas trilhas reúnem vídeos e exercícios práticos para aprofundar temas como autoconhecimento e felicidade.</p>",
+    "imagem": "/assets/images/bg-light-orange.png",
+    "dataCriacao": "2024-02-01T08:00:00.000Z",
+    "destaque": false
+  },
+  {
+    "id": 8,
+    "titulo": "Ilumine: mentes que sonham",
+    "resumo": "Nossa marca e nosso convite.",
+    "texto": "<p>Iluminar para despertar. Iluminar para transformar. Esse é o chamado do Ilumine.</p>",
+    "imagem": "/assets/images/person-jumping.png",
+    "dataCriacao": "2024-01-15T12:00:00.000Z",
+    "destaque": false
+  }
+]

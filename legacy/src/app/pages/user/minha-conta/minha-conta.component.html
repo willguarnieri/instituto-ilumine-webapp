@@ -1,0 +1,105 @@
+<section class="mt-10 pb-4 content-container">
+  <h2 class="font-museoSemiBold text-darkGray text-2xl mb-6">Minha Conta</h2>
+  <div *ngIf="ready" [formGroup]="angForm">
+    <div class="flex flex-col md:flex-row items-center">
+      <label class="bg-transparent focus:outline-none text-lightGray underline font-museoRegular flex">
+        <img  class="mx-4 w-14 h-14 rounded-full mb-4 md:mb-0" [src]="!previewUrl ? this.angForm.value.foto ? this.angForm.value.foto : '/assets/images/user-picture-placeholder.png' : previewUrl">
+        <span class="flex items-center">Alterar foto do perfil</span>
+        <input type="file" class="hidden" (change)="fotoDestaque = $event.target.files[0]; preview();" accept=".jpg,.jpeg,.png" />
+    </label>
+    </div>
+    <div class="my-10 max-w-xl">
+      <div class="md:flex md:items-center mb-6">
+        <div class="w-full md:w-4/12">
+          <label class="block text-lightGray font-museoRegular mb-1 md:mb-0 pr-4">
+            Nome Completo*
+          </label>
+        </div>
+        <div class="w-full md:w-8/12">
+          <input type="text" class="input-minha-conta" formControlName="nome" maxlength="50" >
+          <div class="text-xs text-orange mt-2 pl-4" *ngIf="angForm.get('nome').touched && angForm.get('nome').hasError('required')">Campo Obrigatório.</div>
+          <div class="text-xs text-orange mt-2 pl-4" *ngIf="angForm.get('nome').touched && angForm.get('nome').hasError('minLength')">Campo muito curto.</div>
+        </div>
+      </div>
+      <div class="md:flex md:items-center mb-6">
+        <div class="w-full md:w-4/12">
+          <label class="block text-lightGray font-museoRegular mb-1 md:mb-0 pr-4">
+            CPF*
+          </label>
+        </div>
+        <div class="w-full md:w-8/12">
+          <input class="input-minha-conta" type="text" formControlName="cpf" mask="000.000.000-00" >
+          <div class="text-xs text-orange mt-2 pl-4" *ngIf="angForm.get('cpf').touched && angForm.get('cpf').hasError('required')">Campo Obrigatório.</div>
+        </div>
+      </div>
+      <div class="md:flex md:items-center mb-6">
+        <div class="w-full md:w-4/12">
+          <label class="block text-lightGray font-museoRegular mb-1 md:mb-0 pr-4">
+            RG*
+          </label>
+        </div>
+        <div class="w-full md:w-8/12">
+          <input class="input-minha-conta" type="text" formControlName="rg"  >
+          <div class="text-xs text-orange mt-2 pl-4" *ngIf="angForm.get('rg').touched && angForm.get('rg').hasError('required')">Campo Obrigatório.</div>
+        </div>
+      </div>
+      <div class="md:flex md:items-center mb-6">
+        <div class="w-full md:w-4/12">
+          <label class="block text-lightGray font-museoRegular mb-1 md:mb-0 pr-4">
+            WhatsApp*
+          </label>
+        </div>
+        <div class="w-full md:w-8/12">
+          <input class="input-minha-conta" type="text" formControlName="whatsapp"  mask="(00) 0 0000-0000" >
+      <div class="text-xs text-orange mt-2 pl-4" *ngIf="angForm.get('whatsapp').touched && angForm.get('whatsapp').hasError('required')">Campo Obrigatório.</div>
+        </div>
+      </div>
+      <div class="md:flex md:items-center mb-6">
+        <div class="w-full md:w-4/12">
+          <label class="block text-lightGray font-museoRegular mb-1 md:mb-0 pr-4">
+            Data de nascimento
+          </label>
+        </div>
+        <div class="w-full md:w-8/12">
+          <input class="input-minha-conta" type="date" formControlName="dataNascimento">
+        </div>
+      </div>
+      <div class="md:flex md:items-center mb-6">
+        <div class="w-full md:w-4/12">
+          <label class="block text-lightGray font-museoRegular mb-1 md:mb-0 pr-4">
+            Projeto/Escola
+          </label>
+        </div>
+        <div class="w-full md:w-8/12">
+          <select class="input-minha-conta"  name="instituicao" formControlName="instituicao">
+            <option value="" disabled selected>Selecione</option>
+            <option  *ngFor="let instituicao of instituicoes | keyvalue" [value]="instituicao.key">{{instituicao.value}}</option>
+          </select>
+        </div>
+      </div>
+      <div class="md:flex md:items-center mb-6" *ngIf="angForm.get('instituicao').value == 4">
+        <div class="w-full md:w-4/12">
+          <label class="block text-lightGray font-museoRegular mb-1 md:mb-0 pr-4">
+            Informe o projeto
+          </label>
+        </div>
+        <div class="w-full md:w-8/12">
+          <input type="text" class="input-minha-conta" formControlName="instituicaoOutros" maxlength="100" >
+          <div class="text-xs text-orange mt-2 pl-4" *ngIf="angForm.get('instituicaoOutros').touched && angForm.get('instituicao').value == 4 && angForm.get('instituicaoOutros').value == ''">Campo Obrigatório.</div>
+        </div>
+      </div>
+      <div class="md:flex">
+        <div class="md:w-3/12"></div>
+        <div class="md:w-9/12">
+          <button type="button"  (click)="Salvar()"   [ngClass]="{'opacity-70 cursor-default': angForm.invalid,  'hover:bg-white hover:text-green': angForm.valid }"
+          class="font-museoRegular rounded-button w-44 h-14 bg-green text-md uppercase border-2 border-solid border-green text-center focus:outline-none" >
+              Salvar >
+            <div *ngIf="showloading" class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+          </button>
+        </div>
+        <div class="text-base text-orange mt-2" *ngIf="errorMessage">{{errorMessage}}</div>
+      </div>
+    </div>
+  </div>
+
+</section>

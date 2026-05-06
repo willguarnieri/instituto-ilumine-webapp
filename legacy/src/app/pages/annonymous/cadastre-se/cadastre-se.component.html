@@ -1,0 +1,55 @@
+<div class="go-back">
+  <a [routerLink]="['']"><span class="material-icons mr-5">west</span> Voltar</a>
+</div>
+<div class="signup grid grid-cols-1 xl:grid-cols-2">
+  <div class="signup-content mx-4">
+    <div class="mt-28 mb-28 flex justify-center" *ngIf="!showSuccess">
+      <form [formGroup]="cadastroForm">
+        <div class="mb-16">😊</div>
+        <p class="text-base mb-10">Olá! Que legal que você se interessou em participar com a gente dessa jornada de cuidado emocional.</p>
+        <h3 class="font-bold text-5xl mb-10">Crie sua conta</h3>
+        
+        <div class="signup-input floating-placeholder mb-6">
+          <input type="text" class="w-full" formControlName="nome" placeholder=" " />
+          <label for="username">Nome completo</label>
+          <div class="feedback-text ml-6 mt-2.5" *ngIf="nome.touched && (nome.hasError('required') || nome.hasError('minlength'))">Nome completo obrigatório.</div>
+        </div>
+          
+        <div class="signup-input floating-placeholder mb-6">
+          <input type="text" class="w-full" formControlName="email" placeholder=" " />
+          <label for="username">Endereço de e-mail</label>
+          <div class="feedback-text ml-6 mt-2.5" *ngIf="email.touched && (email.hasError('required') || email.hasError('pattern'))">Você não digitou seu e-mail corretamente.</div>
+        </div>
+  
+        <div class="signup-terms flex items-center mb-10">
+          <input type="checkbox" formControlName="ciente" id="ciente" class="checkbox">
+          <label for="ciente">Estou ciente dos <a href="#" title="Termos de Uso">Termos de Uso</a>, e <a href="#" title="Políticas de privacidade">Políticas de privacidade</a></label>
+        </div>
+        
+        <div class="signup-button mb-6">
+          <button class="btn-green" (click)="submit()">CADASTRAR</button>
+          <div class="feedback-text ml-6 mt-2.5" *ngIf="showError" [innerHTML] = "mensagemErro">Erro durante o cadastro</div>
+        </div>
+        <div class="signup-subject">
+          Já tem uma conta?
+          <a [routerLink]="['/login']"> Acesse aqui</a>
+        </div>
+      </form>
+    </div>
+
+    <div class="signup-success min-h-screen flex justify-center items-center" *ngIf="showSuccess">
+      <div class="signup-success-container">
+        <h3 class="font-bold text-5xl text-green mb-10">Conta criada com <br>sucesso!</h3>
+        <p class="text-2xl  text-black">Você receberá uma senha em seu e-mail.</p>
+        <p class="text-base mb-10 text-darkGray">Lembre-se cheque sua caixa de SPAM :)</p>
+        <a [routerLink]="['/login']" class="btn-green">Acessar plataforma</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="signup-image relative hidden xl:block">
+    <div class="d-none badge">
+      <img src="/assets/images/badge.png">
+    </div>
+  </div>
+</div>

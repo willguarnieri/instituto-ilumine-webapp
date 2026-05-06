@@ -1,0 +1,15 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Azure/static-web-apps-cli/main/schema/swa-cli.config.schema.json",
+  "configurations": {
+    "app": {
+      "context": "https://delightful-pond-0f5539e10.1.azurestaticapps.net",
+      "run": "npm run dev",
+      "apiLocation": "",
+      "outputLocation": "dist",
+      "devserverTimeout": 10000,
+      "open": "true",
+      "appName": "portal-ilumine-stage",
+      "resourceGroupName": "portal-ilumine-stage-rg"
+    }
+  }
+}

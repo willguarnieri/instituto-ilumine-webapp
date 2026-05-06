@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './styles/fonts.scss';
+@import './styles/icons.scss';
+@import './styles/utils.scss';
+
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+
+@import './styles/swiper-overrides.scss';
+@import './styles/home.scss';
+@import './styles/processo-seletivo.scss';

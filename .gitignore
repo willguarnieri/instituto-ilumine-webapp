@@ -1,0 +1,49 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Legacy Angular (if dependencies installed there)
+legacy/node_modules
+legacy/dist
+legacy/tmp
+legacy/out-tsc
+
+# profiling / tooling
+chrome-profiler-events*.json
+speed-measure-plugin*.json
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# misc
+.sass-cache
+connect.lock
+coverage
+libpeerconnection.log
+testem.log
+typings
+.history/*
+
+# System Files
+Thumbs.db

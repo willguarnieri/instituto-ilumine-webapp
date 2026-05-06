@@ -1,0 +1,261 @@
+section {
+    --status-1: #fbb3b3;
+    --status-2: #fbceb3;
+    --status-3: #cfcfcf;
+    --status-4: #73e690;
+    --status-5: #b3cafb;
+    background: #f8f8f8;
+    border-radius: 34px;
+    position: relative;
+    z-index: 1;
+    min-height:100vh;
+}
+
+.user-complete-map {
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 150px
+}
+
+h2, h3, h4,
+.user-info span {
+    font-weight: 700;
+    color: #0a4e89;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+h4 {
+    color: #484444;
+}
+
+.map-group-header,
+.map-item-content {
+    width: 60%;
+    padding-right: 26px;
+}
+
+.map-descriprion {
+    width: 40%;
+}
+
+.actual-status {
+    width: 148px;
+    height: 30px;
+    position: relative;
+}
+
+.map-group-title:after {
+    content: '';
+    width: 10px;
+    height: 5px;
+    display: block;
+    border-radius: 5px;
+    background: #0a4e89;
+    margin-top: -2px;
+}
+
+.name-status {
+    position: absolute;
+    top: 3px;
+    font-size: 11px
+}
+
+.name-status.status-1 {
+    left: 32px;
+}
+
+.name-status.status-2 {
+    left: 64px;
+}
+
+.name-status.status-3 {
+    left: 92px;
+}
+
+.name-status.status-4 {
+    right: 64px;
+    text-align: right;
+}
+
+.name-status.status-5 {
+    left: 32px;
+    text-align: right;
+}
+
+.status-pillow {
+    width: 28px;
+    height: 10px;
+    border-radius: 5px;
+}
+
+.status-pillow.active {
+    height:28px;
+}
+
+.status-pillow.level-1 {
+    background: var(--status-1);
+}
+
+.status-pillow.level-2 {
+    background: var(--status-2);
+}
+
+.status-pillow.level-3 {
+    background: var(--status-3);
+}
+
+.status-pillow.level-4 {
+    background: var(--status-4);
+}
+
+.status-pillow.level-5 {
+    background: var(--status-5);
+}
+
+.map-item-description {
+    color: #484444;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.map-item-content-action,
+.map-item-content-action label {
+    cursor: pointer;
+}
+.map-item-title {
+    font-family: 'Roboto', sans-serif !important;
+    text-align: right;
+    min-width: 140px;
+    width: 140px;
+    display: block;
+}
+
+
+.status-bar {
+    width: 100%;
+    border-radius: 50px;
+    background: #e2e2e2;
+}
+
+.status-progress {
+    padding: 2px 16px;
+    width: fit-content;
+    max-width: 100%;
+    border-radius: 50px;
+    display: flex;
+}
+
+.status-bar-title{
+    white-space: nowrap;
+}
+
+.status-progress.level-1 {
+    background: var(--status-1);
+}
+
+.status-progress.level-2 {
+    background: var(--status-2);
+    
+}
+
+.status-progress.level-3 {
+    background: var(--status-3);
+    
+}
+
+.status-progress.level-4 {
+    background: var(--status-4);
+   
+}
+
+.status-progress.level-5 {
+    background: var(--status-5);
+    
+}
+
+.arrow-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.map-item-content span.material-icons {
+    transform: rotate(0deg);
+}
+
+.map-item-content span.material-icons.open {
+    transform: rotate(-180deg);
+}
+
+.map-descriprion,
+.map-group-items {
+    position: relative;
+}
+
+/* Responsive */
+@media only screen and (max-width: 1280px) {
+    .map-group-header,
+    .map-item-content,
+    .map-descriprion {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .user-complete-map {
+        padding: 1.5rem;
+    }
+    
+    .map-group-header {
+        padding: 0;
+    }
+    
+    .map-item {
+        flex-direction: column;
+    }
+    
+    .map-item-description {
+        position: relative;
+    }
+
+    .map-item-description {
+        padding: 16px;
+    }
+
+}
+
+@media only screen and (max-width: 576px) {
+    .user-info,
+    .map-group-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .date-logo,
+    .actual-status {
+        margin-top: 16px;
+    }
+
+    .user-complete-map {
+        padding: 1rem;
+    }
+
+    .map-item-title {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 6px;
+    }
+    
+    .map-item-content-action {
+        flex-direction: column;
+    }
+
+    .map-item-content span.material-icons {
+        transform: rotate(90deg);
+    }
+
+    .map-item-content span.material-icons.open {
+        transform: rotate(-90deg);
+    }
+}

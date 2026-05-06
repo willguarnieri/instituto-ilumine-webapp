@@ -1,0 +1,200 @@
+<section *ngIf="!exibirRelatorio && !loading" class="user-complete-map p-10">
+    <div class="user-map" *ngIf="!testeFeito">
+      <h2 class="font-museoSemiBold text-darkGray text-2xl mb-6">Estamos felizes por você ter aceitado o convite de viver
+        essa jornada de transformação conosco.</h2>
+      <div *ngIf="cadastroFinalizado === true">
+        <p class="font-museoRegular text-darkGray text-base mb-6">
+          Juntos iremos nos conhecer melhor, potencializar nossos talentos e criar uma rede em prol de um mundo mais
+          saudável e feliz.
+          <br>
+          <br>
+          Para começar nossa jornada, vamos descobrir como estamos através do <span class="text-orange">Questionário de
+            Personalidade MAPA.</span>
+        </p>
+        <a href="https://sistemateste.mapabr.app/test/habilidadesocioemocionais"
+          class="py-2 px-4 font-museoRegular rounded-button bg-orange text-md  h-12 w-6/12 lg:w-52 uppercase border-2 border-solid border-orange p-0 text-center hover:bg-white hover:text-orange focus:outline-none">
+          Preencha o seu
+      </a>
+      </div>
+        
+      <div class="user-map" *ngIf="cadastroFinalizado === false">
+        <p class="font-museoRegular text-darkGray text-2xl">
+          Finalize seu cadastro para acessar o questionário <a routerLink="/user/minha-conta" class="text-pink">seu
+            cadastro</a>
+        </p>
+      </div>
+    </div>
+    <div class="user-map" *ngIf="testeFeito">
+      <p class="font-museoRegular text-darkGray text-2xl">
+        Agora que você já concluiu o seu questionário de personalidade, siga para assistir nossas <a
+          routerLink="/user/trilhas" class="text-pink">Trilhas de Conteúdo</a>.
+      </p>
+    </div>
+  </section>
+
+<section class="user-complete-map p-10" *ngIf="exibirRelatorio && !loading">
+    <header class="user-info flex justify-between mb-16">
+        <h2 class="name text-base"></h2>
+        <div class="date-logo flex">
+            <span class="date text-base">{{dataConclusao | date:'dd/MM/yyyy'}}</span>
+            <img src="/assets/images/mapa-psicossocial.png" alt="Mapa Psicossocial" class="ml-8">
+        </div>
+    </header>
+
+    <div class="user-map">
+        <div class="map-group mb-20">
+            <div class="user-map-header">
+                <header class="map-group-header flex justify-between items-center mb-6 pr-6">
+                    <div class="map-group-icon-title flex items-center">
+                        <img src="/assets/images/map-health-and-wellbeing.png" alt="Mapa Psicossocial">
+                        <h3 class="map-group-title ml-12">Saúde e Bem Estar</h3>
+                    </div>
+                    <!-- <div class="actual-status flex justify-between items-end">
+                        <span class="name-status status-1 text-xs">Inferior</span>
+                        <div class="status-pillow level-1 active"></div>
+                        <div class="status-pillow level-2"></div>
+                        <div class="status-pillow level-3"></div>
+                        <div class="status-pillow level-4"></div>
+                        <div class="status-pillow level-5"></div>
+                    </div> -->
+                </header>
+            </div>
+            
+            <div class="map-group-items">
+                <div *ngFor="let item of relatorioMapaSaudeBemEstar" class="map-group-items">
+                    <div class="map-item mb-2.5 flex">
+                        <div class="map-item-content">
+                            <a (click)="exibirDetalhe(item)" title="Mais detalhes" class="map-item-content-action flex justify-between items-center">
+                                <label class="map-item-title text-xs">{{item.dimensao}}</label>
+                                <div class="status-bar ml-3 mr-1">
+                                    <div class="status-progress {{getClassification(item.classificacao)}}" style="width:{{item.pontuacao}}%">
+                                        <span class="status-bar-title text-xs font-bold">{{item.classificacao}}</span>
+                                    </div>
+                                </div>
+                                <span class="material-icons arrow-icon" [ngClass]="{'open': !item.exibirDetalhe}">arrow_right</span>
+                            </a>
+                        </div>
+    
+                        <aside class="map-descriprion">
+                            <div class="map-item-description" [ngClass]="{'hidden': !item.exibirDetalhe}">
+                                <h4 class="map-descriprion-title text-sm">{{item.dimensao}}</h4>
+                                <strong class="text-sm">Classificação: <span class="item-classification">{{item.classificacao}}</span></strong>
+                                <p class="item-description text-sm">{{item.descricao}}</p>
+                            </div>
+                        </aside>
+                    </div>
+                </div>                
+            </div>
+        </div>
+
+        <div class="map-group mb-20">
+            <div class="user-map-header">
+                <header class="map-group-header flex justify-between items-center mb-6 pr-6">
+                    <div class="map-group-icon-title flex items-center">
+                        <img src="/assets/images/map-social-age.png" alt="Mapa Psicossocial">
+                        <h3 class="map-group-title ml-12">Identidade Social</h3>
+                    </div>
+                    
+                </header>
+            </div>
+            
+            <div *ngFor="let item of relatorioMapaIdentidadeSocial" class="map-group-items">
+                <div class="map-item mb-2.5 flex">
+                    <div class="map-item-content">
+                        <a (click)="exibirDetalhe(item)" title="Mais detalhes" class="map-item-content-action flex justify-between items-center">
+                            <label class="map-item-title text-xs">{{item.dimensao}}</label>
+                            <div class="status-bar ml-3 mr-1">
+                                <div class="status-progress {{getClassification(item.classificacao)}}" style="width:{{item.pontuacao}}%">
+                                    <span class="status-bar-title text-xs font-bold">{{item.classificacao}}</span>
+                                </div>
+                            </div>
+                            <span class="material-icons arrow-icon" [ngClass]="{'open': !item.exibirDetalhe}">arrow_right</span>
+                        </a>
+                    </div>
+
+                    <aside class="map-descriprion">
+                        <div class="map-item-description" [ngClass]="{'hidden': !item.exibirDetalhe}">
+                            <h4 class="map-descriprion-title text-sm">{{item.dimensao}}</h4>
+                            <strong class="text-sm">Classificação: <span class="item-classification">{{item.classificacao}}</span></strong>
+                            <p class="item-description text-sm">{{item.descricao}}</p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+
+        <div class="map-group mb-20">
+            <div class="user-map-header">
+                <header class="map-group-header flex justify-between items-center mb-6 pr-6">
+                    <div class="map-group-icon-title flex items-center">
+                        <img src="/assets/images/map-social-and-family-support.png" alt="Mapa Psicossocial">
+                        <h3 class="map-group-title ml-12">Apoio Social Familiar</h3>
+                    </div>
+                    
+                </header>
+            </div>
+           
+            <div *ngFor="let item of relatorioMapaApoioSocialFamiliar" class="map-group-items">
+                <div class="map-item mb-2.5 flex">
+                    <div class="map-item-content">
+                        <a (click)="exibirDetalhe(item)" title="Mais detalhes" class="map-item-content-action flex justify-between items-center">
+                            <label class="map-item-title text-xs">{{item.dimensao}}</label>
+                            <div class="status-bar ml-3 mr-1">
+                                <div class="status-progress {{getClassification(item.classificacao)}}" style="width:{{item.pontuacao}}%">
+                                    <span class="status-bar-title text-xs font-bold">{{item.classificacao}}</span>
+                                </div>
+                            </div>
+                            <span class="material-icons arrow-icon" [ngClass]="{'open': !item.exibirDetalhe}">arrow_right</span>
+                        </a>
+                    </div>
+
+                    <aside class="map-descriprion">
+                        <div class="map-item-description" [ngClass]="{'hidden': !item.exibirDetalhe}">
+                            <h4 class="map-descriprion-title text-sm">{{item.dimensao}}</h4>
+                            <strong class="text-sm">Classificação: <span class="item-classification">{{item.classificacao}}</span></strong>
+                            <p class="item-description text-sm">{{item.descricao}}</p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+        
+        <div class="map-group mb-20">
+            <div class="user-map-header">
+                <header class="map-group-header flex justify-between items-center mb-6 pr-6">
+                    <div class="map-group-icon-title flex items-center">
+                        <img src="/assets/images/map-heart.png" alt="Mapa Psicossocial">
+                        <h3 class="map-group-title ml-12">Habilidades Socioemocionais</h3>
+                    </div>
+                   
+                </header>
+            </div>
+           
+            <div *ngFor="let item of relatorioMapaHabilidadesSocioemocionais" class="map-group-items">
+                <div class="map-item mb-2.5 flex">
+                    <div class="map-item-content">
+                        <a (click)="exibirDetalhe(item)" title="Mais detalhes" class="map-item-content-action flex justify-between items-center">
+                            <label class="map-item-title text-xs">{{item.dimensao}}</label>
+                            <div class="status-bar ml-3 mr-1">
+                                <div class="status-progress {{getClassification(item.classificacao)}}" style="width:{{item.pontuacao}}%">
+                                    <span class="status-bar-title text-xs font-bold">{{item.classificacao}}</span>
+                                </div>
+                            </div>
+                            <span class="material-icons arrow-icon" [ngClass]="{'open': !item.exibirDetalhe}">arrow_right</span>
+                        </a>
+                    </div>
+
+                    <aside class="map-descriprion">
+                        <div class="map-item-description" [ngClass]="{'hidden': !item.exibirDetalhe}">
+                            <h4 class="map-descriprion-title text-sm">{{item.dimensao}}</h4>
+                            <strong class="text-sm">Classificação: <span class="item-classification">{{item.classificacao}}</span></strong>
+                            <p class="item-description text-sm">{{item.descricao}}</p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
