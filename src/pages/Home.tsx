@@ -101,12 +101,6 @@ export function Home() {
                 <p className="font-museoRegular text-2xl text-darkGray mt-16 mb-24">
                   Somos uma entidade filantrópica, sem fins lucrativos, fundada em 2019, com a missão de trabalhar a saúde mental de jovens em contextos de vulnerabilidade socioeconômica.
                 </p>
-                <Link
-                  to="/o-instituto"
-                  className="inline-block font-museoRegular rounded-button bg-green text-lg uppercase border-2 border-solid border-green w-64 h-14 leading-[3.25rem] text-center hover:bg-white hover:text-green focus:outline-none"
-                >
-                  Venha com a gente! ;)
-                </Link>
               </div>
             </div>
           </SwiperSlide>
