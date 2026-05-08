@@ -10,16 +10,16 @@ export function Footer() {
 
         <ul className="flex flex-col justify-center items-center md:items-start md:ml-8 w-full md:w-4/12 md:pt-6">
           <li className="p-3 hover:underline cursor-pointer">
-            <Link to="/">Início</Link>
+            <Link to="/" onClick={() => window.scrollTo(0, 0)}>Início</Link>
           </li>
           <li className="p-3 hover:underline cursor-pointer">
-            <Link to="/o-instituto">O Instituto</Link>
+            <Link to="/o-instituto" onClick={() => window.scrollTo(0, 0)}>O Instituto</Link>
           </li>
           <li className="p-3 hover:underline cursor-pointer">
-            <Link to="/como-contribuir">Como Contribuir</Link>
+            <Link to="/como-contribuir" onClick={() => window.scrollTo(0, 0)}>Como Contribuir</Link>
           </li>
           <li className="p-3 hover:underline cursor-pointer">
-            <Link to="/fale-conosco">Contato</Link>
+            <Link to="/fale-conosco" onClick={() => window.scrollTo(0, 0)}>Contato</Link>
           </li>
         </ul>
 
