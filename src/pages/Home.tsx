@@ -97,7 +97,7 @@ export function Home() {
               style={{ backgroundImage: 'url(/assets/images/banner-home-1.png)' }}
             >
               <div className="containter absolute z-10 top-0 left-0 max-w-3xl px-10 py-20 md:px-20 md:pt-20 ">
-                <h1 className="font-zerocalcare text-6xl text-darkGray max-w-md">Bem-vindos (as) ao Ilumine!</h1>
+                <h1 className="font-zerocalcare text-6xl text-darkGray max-w-md">Que bom receber você aqui no Ilumine</h1>
                 <p className="font-museoRegular text-2xl text-darkGray mt-16 mb-24">
                   Somos uma entidade filantrópica, sem fins lucrativos, fundada em 2019, com a missão de trabalhar a saúde mental de jovens em contextos de vulnerabilidade socioeconômica.
                 </p>
