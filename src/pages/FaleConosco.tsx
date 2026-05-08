@@ -23,11 +23,18 @@ export function FaleConosco() {
   } = useForm<FormValues>({ mode: 'onChange' });
   const [showSuccess, setShowSuccess] = useState(false);
   const [submitError, setSubmitError] = useState(false);
+  const [lastSubmitTime, setLastSubmitTime] = useState(0);
 
   const showFieldError = (name: keyof FormValues) =>
     (touchedFields[name] || isSubmitted) && errors[name];
 
   async function onSubmit(data: FormValues) {
+    const now = Date.now();
+    if (now - lastSubmitTime < 10000) {
+      setSubmitError(true);
+      return;
+    }
+    setLastSubmitTime(now);
     setSubmitError(false);
     try {
       const response = await fetch(FORMSPREE_ENDPOINT, {
@@ -109,10 +116,16 @@ export function FaleConosco() {
                       type="text"
                       placeholder="WHATSAPP*"
                       className="bg-transparent outline-none placeholder-lightGray border border-green text-lightGray rounded-3xl px-6 py-3 w-full mb-5"
-                      {...register('telefone', { required: true })}
+                      {...register('telefone', {
+                      required: true,
+                      pattern: /^(\+?55\s?)?(\(?\d{2}\)?\s?)?(9\s?)?\d{4}[-\s]?\d{4}$/,
+                    })}
                     />
-                    {showFieldError('telefone') && (
+                    {showFieldError('telefone') && errors.telefone?.type === 'required' && (
                       <div className="text-xs text-orange absolute feedback-text">Campo Obrigatório.</div>
+                    )}
+                    {showFieldError('telefone') && errors.telefone?.type === 'pattern' && (
+                      <div className="text-xs text-orange absolute feedback-text">Número inválido.</div>
                     )}
                   </div>
 
