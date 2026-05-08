@@ -197,7 +197,7 @@ export function Home() {
         <div className="bg-circle absolute z-10 -right-52 -bottom-52" />
       </section>
 
-      <section className="min-h-96 py-20 md:py-40 max-w-4xl mx-auto">
+      <section className="relative z-20 min-h-96 py-20 md:py-40 max-w-4xl mx-auto bg-white">
         <Depoimentos />
       </section>
 
