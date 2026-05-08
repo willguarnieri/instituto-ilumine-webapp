@@ -187,16 +187,10 @@ export function Home() {
               E se você é <strong>jovem</strong>, também pode nos procurar. Sua voz e seu engajamento fazem parte dessa transformação.
             </p>
             <Link
-              to="/como-participar/jovens"
+              to="/como-participar"
               className="inline-block font-museoRegular rounded-button bg-green text-md mr-4 mb-4 h-12 w-5/12 lg:w-52 uppercase border-2 border-solid border-green p-0 leading-[3rem] text-center hover:bg-white hover:text-green focus:outline-none"
             >
-              Jovens &gt;
-            </Link>
-            <Link
-              to="/como-participar/educador"
-              className="inline-block font-museoRegular rounded-button bg-orange text-md h-12 w-6/12 lg:w-52 uppercase border-2 border-solid border-orange p-0 leading-[3rem] text-center hover:bg-white hover:text-orange focus:outline-none"
-            >
-              Educadores &gt;
+              Venha com a gente &gt;
             </Link>
           </div>
         </div>
