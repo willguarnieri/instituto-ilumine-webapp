@@ -7,10 +7,12 @@ import { FaleConosco } from './pages/FaleConosco';
 import { Home } from './pages/Home';
 import { Institucional } from './pages/Institucional';
 import { ProcessoSeletivo } from './pages/ProcessoSeletivo';
+import { ScrollToTop } from './components/ScrollToTop';
 
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/o-instituto" element={<Institucional />} />
