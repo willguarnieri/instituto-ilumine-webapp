@@ -1,4 +1,5 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { Blog } from './pages/Blog';
 import { BlogItem } from './pages/BlogItem';
 import { ComoParticipar } from './pages/ComoParticipar';
@@ -26,6 +27,7 @@ export default function App() {
         <Route path="/processo-seletivo" element={<ProcessoSeletivo />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
+      <SpeedInsights />
     </BrowserRouter>
   );
 }
