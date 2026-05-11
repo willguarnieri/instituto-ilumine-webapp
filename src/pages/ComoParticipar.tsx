@@ -24,7 +24,7 @@ export function ComoParticipar() {
               Se você quer acompanhar o projeto, saber mais ou trocar uma ideia com a gente, preencha o formulário abaixo ou envie um e-mail para <a href="mailto:contato@institutoilumine.com.br" className="text-green hover:underline">contato@institutoilumine.com.br</a>.
             </p>
             <a
-              href="https://forms.gle/vfZe43cCF7QKDPb97"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdVT8SA8i11l5w5qtOzeDpkPXcNDPr_PXLIhHyRJwrChjzdCg/viewform"
               target="_blank"
               rel="noreferrer"
               className="inline-block font-museoRegular rounded-button bg-green text-md mr-4 mb-4 h-12 w-full md:w-5/12 lg:w-52 uppercase border-2 border-solid border-green px-4 py-2 text-center hover:bg-white hover:text-green focus:outline-none"
