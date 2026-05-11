@@ -10,7 +10,7 @@ export function ComoParticipar() {
         style={{ backgroundImage: 'url(/assets/images/header-decoration.png)' }}
       >
         <div className="container mx-auto w-8/12 text-right">
-          <h1 className="font-zerocalcare text-8xl text-green">Saiba como participar</h1>
+          <h1 className="font-zerocalcare text-8xl text-green">Quer saber mais?</h1>
         </div>
       </section>
 
@@ -18,10 +18,10 @@ export function ComoParticipar() {
         <div className="container w-11/12 md:w-8/12">
           <div className="w-10/12">
             <p className="text-darkGray font-museoRegular mb-6">
-              Olá! Que legal que você se interessou em participar com a gente dessa jornada de cuidado emocional. A nossa plataforma disponibiliza trilhas de conteúdo e práticas em temas como: autoconhecimento, saúde integral, projeto de vida, competências sócio-emocionais e felicidade.
+              Que bom que você chegou até aqui. O Instituto Ilumine trabalha com promoção de saúde mental e convivência em escolas públicas brasileiras — com base em evidência, de forma contínua e integrada à rotina escolar.
             </p>
             <p className="text-darkGray font-museoRegular mb-12">
-              Disponibilizamos essas trilhas para jovens e educadores de escolas públicas, institutos e ONGs que trabalham com público entre 14 e 24 anos. Para participar basta preencher os dados no link abaixo e voce recebera login e senha para acessar o conteúdo.
+              Se você quer acompanhar o projeto, saber mais ou trocar uma ideia com a gente, preencha o formulário abaixo ou envie um e-mail para <a href="mailto:contato@institutoilumine.com.br" className="text-green hover:underline">contato@institutoilumine.com.br</a>.
             </p>
             <a
               href="https://forms.gle/vfZe43cCF7QKDPb97"
