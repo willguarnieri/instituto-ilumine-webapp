@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-
 export function Footer() {
   return (
     <footer className="h-full bg-darkGray text-white font-museoRegular text-xs uppercase p-4">
@@ -7,7 +6,6 @@ export function Footer() {
         <Link to="/" className="cursor-pointer inline-flex justify-center items-center p-6 w-full md:w-3/12">
           <img src="/assets/images/logo-vertical.png" alt="Ilumine" />
         </Link>
-
         <ul className="flex flex-col justify-center items-center md:items-start md:ml-8 w-full md:w-4/12 md:pt-6">
           <li className="p-3 hover:underline cursor-pointer">
             <Link to="/" onClick={() => window.scrollTo(0, 0)}>Início</Link>
@@ -22,9 +20,9 @@ export function Footer() {
             <Link to="/fale-conosco" onClick={() => window.scrollTo(0, 0)}>Contato</Link>
           </li>
         </ul>
-
         <div className="flex flex-col items-center md:items-start w-full md:w-5/12 md:pt-6 mt-6 md:mt-0 border-t md:border-t-0 md:border-l border-white/20 md:pl-8">
           <p className="p-3 font-museoRegular text-xs uppercase tracking-wide">Instituto Ilumine</p>
+          <p className="p-3 normal-case text-white/70 text-[11px]">CNPJ: 34.957.392/0001-01</p>
           <a href="mailto:contato@institutoilumine.com.br" className="p-3 hover:underline normal-case">
             contato@institutoilumine.com.br
           </a>
