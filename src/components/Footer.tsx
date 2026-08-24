@@ -22,6 +22,7 @@ export function Footer() {
         </ul>
         <div className="flex flex-col items-center md:items-start w-full md:w-5/12 md:pt-6 mt-6 md:mt-0 border-t md:border-t-0 md:border-l border-white/20 md:pl-8">
           <p className="p-3 font-museoRegular text-xs uppercase tracking-wide">Instituto Ilumine</p>
+          <p className="p-3 normal-case text-white/70 text-[11px]">CNPJ: 34.957.392/0001-01</p>
           <a href="mailto:contato@institutoilumine.com.br" className="p-3 hover:underline normal-case">
             contato@institutoilumine.com.br
           </a>
