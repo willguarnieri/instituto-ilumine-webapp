@@ -7,7 +7,6 @@ import { FacaParte } from './pages/FacaParte';
 import { FaleConosco } from './pages/FaleConosco';
 import { Home } from './pages/Home';
 import { Institucional } from './pages/Institucional';
-import { ProcessoSeletivo } from './pages/ProcessoSeletivo';
 import { ScrollToTop } from './components/ScrollToTop';
 
 export default function App() {
@@ -24,7 +23,6 @@ export default function App() {
         <Route path="/como-participar/educador" element={<ComoParticipar />} />
         <Route path="/como-contribuir" element={<FacaParte />} />
         <Route path="/fale-conosco" element={<FaleConosco />} />
-        <Route path="/processo-seletivo" element={<ProcessoSeletivo />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <SpeedInsights />
