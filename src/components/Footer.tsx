@@ -23,6 +23,11 @@ export function Footer() {
         <div className="flex flex-col items-center md:items-start w-full md:w-5/12 md:pt-6 mt-6 md:mt-0 border-t md:border-t-0 md:border-l border-white/20 md:pl-8">
           <p className="p-3 font-museoRegular text-xs uppercase tracking-wide">Associação Instituto Ilumine</p>
           <p className="p-3 normal-case text-white/70 text-[11px]">CNPJ: 34.957.392/0001-01</p>
+          <address className="p-3 not-italic normal-case text-white/70 text-[11px] leading-relaxed">
+            Rua Gilberto Sabino, 215, Andar 1, Sala 06
+            <br />
+            Pinheiros, São Paulo/SP – CEP 05425-020
+          </address>
           <a href="mailto:contato@institutoilumine.com.br" className="p-3 hover:underline normal-case">
             contato@institutoilumine.com.br
           </a>

@@ -48,6 +48,16 @@ export function Institucional() {
           </p>
         </div>
 
+        <div className="containter relative z-20 justify-center max-w-4xl w-screen px-10 pb-10 grid grid-cols-1 md:grid-cols-3 gap-9 justify-items-center mx-auto">
+          <h2 className="font-museoSemiBold text-3xl text-darkGray text-right">Nossa missão</h2>
+          <p className="font-museoLight text-base text-darkGray col-span-2">
+            <strong>Trabalhar a saúde mental de jovens em contextos de vulnerabilidade socioeconômica.</strong>
+            <br />
+            <br />
+            Atuamos em escolas públicas brasileiras com o Programa Ilumine, que promove saúde mental e convivência de forma contínua e integrada à rotina escolar, com base em evidências.
+          </p>
+        </div>
+
         <div
           className="absolute z-10 -bottom-40 md:-bottom-36 left-0 h-56 md:h-96 w-full bg-center bg-no-repeat bg-cover"
           style={{ backgroundImage: 'url(/assets/images/line-rainbow-small.png)' }}
